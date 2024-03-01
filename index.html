@@ -1,250 +1,567 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>Atomicals HashrateCap</title> 
-</head>
-<body>
+ <head>
 	<style>
-		
-		table {
-			border:1px solid #b3adad;
-			border-collapse:collapse;
-			padding:5px;
+
+#wrapper > img{
+    width:100%;
+    xheight: 100%;
+}
+.rotate {
+	transform:rotate(90deg)
+}
+.dashed {
+  
+  xaspect-ratio: 1;
+  padding:20px;
+  xposition: relative;
+	border-color:skyblue;
+	border-width:8px;
+	
+	border-style: dashed;
+	background-color: #7d7df0;
+}
+.xdashed::before {
+  content:"";
+  position: absolute;
+  inset: 0;
+  padding: var(--b);
+  background: 
+    repeating-conic-gradient(var(--c1) 0 25%,var(--c2) 0 50%) 
+    0 0/var(--s) var(--s) round;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+.l1{
+	
+}        
+ul li {
+  list-style: none;
+  padding-left: 50px;
+  position: relative;
+  xbackground-size: contain;
+  xbackground-image: url("hypno.gif");
+}
+
+ul{
+	xbackground-image: url(hypno.gif);
+	xbackground-repeat: repeat-x; 
+
+}
+ul li:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-image: url("hypno.gif");
+}
+    
+
+	@font-face {
+		font-family: 'font0';
+		src: url('COMIC.TTF')  format('truetype');
 		}
-		table th {
-			border:1px solid #b3adad;
-			padding:5px;
-			background: #f0f0f0;
-			color: #313030;
+	@font-face {
+		font-family: 'font1';
+		src: url('COMICBD.TTF')  format('truetype');
 		}
-		table td {
-			border:1px solid #b3adad;
-			text-align:center;
-			padding:5px;
-			background: #ffffff;
-			color: #313030;
+	@font-face { font-family: 'font2'; src: url('plate.ttf')  format('truetype'); }
+
+@font-face { font-family: 'fonta'; src: url('0.ttf')  format('truetype'); }
+@font-face { font-family: 'fontb'; src: url('1.ttf')  format('truetype'); }
+@font-face { font-family: 'fontc'; src: url('2.ttf')  format('truetype'); }
+@font-face { font-family: 'fontd'; src: url('3.ttf')  format('truetype'); }
+@font-face { font-family: 'fonte'; src: url('4.ttf')  format('truetype'); }
+
+	body {
+		font-family: 'font0';
+		background-image: url(cd.gif);
+		background-repeat: repeat-x; 
+	}
+	html * {
+	}
+	.f1 {
+		font-family: 'font1';
+	}	
+	.f2 { font-family: 'font2'; }	
+	.fa { font-family: 'fonta'; }	
+	.fb { font-family: 'fontb'; }	
+	.fc { font-family: 'fontc'; }	
+	.fd { font-family: 'fontd'; }	
+	.fe { font-family: 'fonte'; }	
+	.bg1 {
+		background-color:olive;
 		}
-		table td:last-child {
-			text-align:right;
+	.bggray {
+		background-color:lightgray;
 		}
-		tbody tr:last-child td:last-child
-		{ 
-  			border: 2px solid black;
+	.bggray2 {
+		background-color:blue;
+		color:white;
 		}
+	.center {
+		text-align:center;
+		}
+	.tright {
+		text-align:right;
+		}
+	.pl {
+		padding-left:30px
+		}
+	.red {
+		color:red;
+  		animation: blinker 0.3s linear infinite;
+		}
+	.nz {
+		background-image: url(mono.gif);
+		background-repeat: repeat-x; 
+}	
+	.blink_me {
+  		animation: blinker 1s linear infinite;
+	}
+	.inline {
+  		display:inline ;
+	}
+	.big {
+  		font-size:44px ;
+	}
+	.qo {
+		margin-left:40px;
+		width:200px;
+		background-color:DarkSeaGreen;
+	}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 	</style>
-	<h1>Atomicals HashrateCap</h1> 
-	<table>
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Diff</th>
-				<th>Start Level</th>
-				<th>Current Level</th>
-				<th>%</th>
-				<th>Total Hashrate</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>&nbsp;Inifinity</td>
-				<td>88888.12</td>
-				<td>48&nbsp;</td>
-				<td>76&nbsp;</td>
-				<td>&nbsp;86.5%</td>
-				<td><font color="#313030">174,575,320,722</font><br></td>
-			</tr>
-			<tr>
-				<td>&nbsp;Einsof</td>
-				<td><span style="font-style: normal; font-weight: 400;">0000000.3</span>&nbsp;</td>
-				<td>80</td>
-				<td>99&nbsp;</td>
-				<td>&nbsp;13.5%</td>
-				<td><font color="#313030">27,488,062,380</font><br></td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>202,063,383,102</td>
-			</tr>
-		</tbody>
-	</table>
+	  <title>000000.6</title>
+
+ </head>
+ <body style="font-size:168%">
+<img src="cd.gif"/>
+<img src="loading1.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+	<h1>
+<div class="blink_me bg1">MININING IN PROGRESSSS....</div>
+	</h1>
+	<h2>
+Newsletter 
+<img src="z.gif"/>
+<img src="z.gif"/>
+<img src="z.gif"/>
+<img src="z.gif"/>
+<img src="z.gif"/>
+<img src="z.gif"/>
+<img src="z.gif"/>
+<img src="z.gif"/> .7 - we ain't got much but we be growing
+	</h1>
+
+<ximg src="mono.gif"/>
+
+<div class='fa inline nz' > fa hello world 0 !!!! </div>
+<div class='fb inline nz' > fb hello world 1 !!!! </div>
+<div class='fc inline nz' > fc hello world 2 !!!! </div>
+<div class='fd inline nz' > fd hello world 3 !!!! </div>
+<div class='fe inline nz' > fd hello world 4 !!!! </div>
+<hr/>
+<pre class='fe bggray'  ><b>
+dear diary, three weeks since minning began
+the holy parameters were chosen - an ft deployed
+no one cares
+no one likes it
+we keep mining
+started hearing voices a week ago
+they have told me: wheel, sliced bread, 0000....
+another mint....
+</b>
+</pre>
+<h3>
+<h5 class="tright">wen GPU?</h5>
+</h3>
+
+<table style="width:100%">
+	<tr>
+	<td>
+<img width=80 xhieght=120/ class="inline" src="wheel.jpg" alt="wheel">
+	</td><td>
+<img width=80 xhieght=120/ class="inline" src="bread.jpg" alt="sliced bread">
+	</td><td>
+<b class="big" >0000....</b>
+	</td>
+	<tr/>
+</table>
+
+
+<br/>
+chizophesto
+	text1
+<div class='f3 phesto'>
+	<h4 class='center' ><u>the eternal miner's honeypot or how i stopped worring
+	about climate change and embraced the paradox.
+	</u><h4>
+
+	<p class='fb'>
+	Lo and behold, dear reader, for we are about to twist
+	nature's inclination for efficiency and declare to her:
+	</p>
+	<p class='fa nz center' >
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+
+	</p>
+	<p class='fa bggray' center > <b>
+	We will find the next mint, no matter how difficult.
+	<br/>
+	We will use you, with no cause, but of capital.
+	<b></p>
+	<p class='fa nz center' >
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+		<img width="20px" src='zero.gif'/>
+	</p>
+
+	<p class='fc'>
+
+	<br/>
+	For we recognize that as much as we wanted to follow delicate efficiency,
+	and order the monetary through collective civil consensus, we fell flat on our bottoms. 
+	Nature's chaotic mingling did not give us rest, and left us with no other way.
+	look at us, we spend energy in order to use it.
+	<br/>
+	let us burn our livelyhood, and this burning be a political consensus upon us.
+
+	<br/>
+	<p class='fe ' center > <b>
+	Ho Tesla, brother, look at us. you dreamed of transmission, so fine it
+	won't cost. But we did not heed. We had to load trucks with the fuel,
+	load the wires with the two phase.
+	 And in each transmission, we sacrificed a good portion.
+	<p>
+	We didn't take your suggested path, dear <code class="fe inline">Tesla</code>. We took ours - by the advice of the paradox.
+	we collectivly decided to burn it all. and we call it transmission.
+
+	<br/>
+	So know, rockefeller or the like. 
+	Instead of loading trucks to deliver fuel to heat homes. 
+	You can just burn it in place and poof... 
+	btc is in the market on the other side of the planet.
+	But not all is lost, at least we have a 
+		pollitical consensus on a monetary system.
+	<br/>
+	<br/>
+	Its been more than a decade already. 
+	<br/>
+		And what did we learn?
+	<br/>
+
+	<p class='fb ' center > <b>
+	The equivalance of computing power to capital.
+	From whales to gold fish, everyone wants to convert their availble
+	compute cycles to capital. We saw the forks. We saw the gpus and ascis.
+	</p>
+	<p>
+
+	<pre>
+	And another cycle is here.
+
+	The no ending minable tokens.
+	
+
+	The paradox at its purest form. 
+	</pre>
+	Not serving the needs of the political consensus.
+	But building upon it. Forever serving the ones with computing power to turn capital.
+	A constant sell preassure, but for what purpose?
+	To raise the difficulty for any mined future token.
+	We didn't secure no network. We are on top of it.
+	By raising the difficulty the scarcity of the token increased,
+	and thus was it eaten up by speculators.
+	<br/>
+<div>
+	
+
+<br/>
+<div class='ps f2 bggray'>
+	ps. Keep your eyse open folks. Be vigiliant.
+	For pow over pow is gonna cycle you through like satoshi originally did.
+</div>
+
 <p>
-	Updates are manually done once a week or so.
-	<br/>
-	<br/>
-	<br/>
-	please contact for correction or additions - einsof_miner@ y4h00 com
+
 </p>
-<h3> Calculation done by </h3>
-<pre>
- level           hashes
- 0    0.0        16              
- 1    0.1        20              
- 2    0.2        23              
- 3    0.3        27              
- 4    0.4        33              
- 5    0.5        39              
- 6    0.6        46              
- 7    0.7        54              
- 8    0.8        64              
- 9    0.9        77              
- 10   0.10       91              
- 11   0.11       108             
- 12   0.12       128             
- 13   0.13       153             
- 14   0.14       182             
- 15   0.15       216             
- 16   00.0       256             
- 17   00.1       305             
- 18   00.2       363             
- 19   00.3       431             
- 20   00.4       512             
- 21   00.5       609             
- 22   00.6       725             
- 23   00.7       862             
- 24   00.8       1025            
- 25   00.9       1218            
- 26   00.10      1449            
- 27   00.11      1723            
- 28   00.12      2049            
- 29   00.13      2436            
- 30   00.14      2897            
- 31   00.15      3445            
- 32   000.0      4096            
- 33   000.1      4871            
- 34   000.2      5793            
- 35   000.3      6889            
- 36   000.4      8192            
- 37   000.5      9742            
- 38   000.6      11586           
- 39   000.7      13778           
- 40   000.8      16384           
- 41   000.9      19484           
- 42   000.10     23171           
- 43   000.11     27555           
- 44   000.12     32768           
- 45   000.13     38968           
- 46   000.14     46341           
- 47   000.15     55109           
- 48   0000.0     65536           
- 49   0000.1     77936           
- 50   0000.2     92682           
- 51   0000.3     110218          
- 52   0000.4     131072          
- 53   0000.5     155872          
- 54   0000.6     185364          
- 55   0000.7     220436          
- 56   0000.8     262144          
- 57   0000.9     311744          
- 58   0000.10    370728          
- 59   0000.11    440872          
- 60   0000.12    524288          
- 61   0000.13    623488          
- 62   0000.14    741456          
- 63   0000.15    881744          
- 64   00000.0    1048577         
- 65   00000.1    1246975         
- 66   00000.2    1482911         
- 67   00000.3    1763488         
- 68   00000.4    2097153         
- 69   00000.5    2493949         
- 70   00000.6    2965821         
- 71   00000.7    3526976         
- 72   00000.8    4194305         
- 73   00000.9    4987897         
- 74   00000.10   5931642         
- 75   00000.11   7053951         
- 76   00000.12   8388609         
- 77   00000.13   9975793         
- 78   00000.14   11863284        
- 79   00000.15   14107901        
- 80   000000.0   16777216        
- 81   000000.1   19951585        
- 82   000000.2   23726567        
- 83   000000.3   28215802        
- 84   000000.4   33554433        
- 85   000000.5   39903170        
- 86   000000.6   47453133        
- 87   000000.7   56431604        
- 88   000000.8   67108864        
- 89   000000.9   79806339        
- 90   000000.10  94906266        
- 91   000000.11  112863207       
- 92   000000.12  134217729       
- 93   000000.13  159612678       
- 94   000000.14  189812532       
- 95   000000.15  225726413       
- 96   0000000.0  268435456       
- 97   0000000.1  319225355       
- 98   0000000.2  379625063       
- 99   0000000.3  451452826       
- 100  0000000.4  536870913       
- 101  0000000.5  638450709       
- 102  0000000.6  759250125       
- 103  0000000.7  902905651       
- 104  0000000.8  1073741824      
-</pre>
+
+<h2 ><b>
+<img width="20px" src='alert2.gif'/>
+<img src='afree.gif'/>
+foucet is closing soon 
+<img width="20px" src='alert2.gif'/>
+</b>
+</h2>
+<h3>
+only today, for a single post
+</h3>
+1,000 einsof for 
+<img class="inline" src='free.gif'/>
+<img class="inline" src='fct.gif'/>
+<a style="padding-left:0px; font-size:10px" href="http://github.com/einsofminer/faucet"> >TEH FAUCET< </a>
+<br/>
+<pre>                    limited offer</pre>
+<br/>
+limited supply
+first get, first serve basis
+<img src='wow.gif'/>
+<br/>
+<img class='rotate inline' src='ein.gif'/>
+<br/>
+<img class='rotate inline' src='cspace.png'/>
+
+<br/>
+<br/>
+<div class="fb">
+	
+	<img src="coffee.gif"/>
+	<b><u>local exchange goods community</b></u>
+</div>
+<br/>
+<table class="fe bold pl">
+	<tr>
+	<th>
+		user         
+	</th>
+	<th> 
+	 	offers    
+	</th>
+	<th> 
+	                            looking for
+	</tr>
+	<tr>
+	<td>
+einsof_miner 
+	</td><td>
+	<div>
+	 10,000 einsof 
+		<br/>
+	99,990 infinity   
+	</div>
+	</td><td>
+	    a gpu miner
+	</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+<br/>
+wen GPU?
+
+<br/>
+<br/>
+<br/>
+<img src='alert1.gif'/>
+<img src='alert2.gif'/>
+<img width="20px" src='alert2.gif'/>
+<img src='alert2.gif'/>
+ EMERGENCY HAPPENING 
+<img src='alert2.gif'/>
+<img src='alert2.gif'/>
+<img width="30px" src='alert1.gif'/>
+<img width="20px" src='alert1.gif'/>
+<img width="50px" src='alert1.gif'/>
+<img width="30px" src='alert1.gif'/>
+<div class="red inline">
+	Message to all miners.
+</div>
+<br/>
+<br/>
+abandon ship!!! 
+
+<br/>
+we have launched a new token.
+<br/>
+<br/>
+<center>it's called <u><code class="fb" >infinito</code></u>.</center>
+<ul>
+<li>
+better parametrs
+</li> <li>
+</li> <li>
+less fees
+</li> <li>
+web3.0scale
+</li> <li>
+pool mining only, unless u NSA
+</li> <li>
+</li> <li>
+first mint gets a gold coin
+</li> <li>
+check market prices, volume bout to explode
+</li> <li>
+gains gurenteed
+</li> <li>
+x10 no, x100 no, xinfinito yes
+</li> <li>
+diff start level == bitcoin current diff
+</li>
+</ul>
+
+<div class='bggray'>
+"best token" - 
+<br/>
+	<div class="qo">
+	newguy fawkes, Head of Operations at POW mining pool inc.
+	</div>
+</div>
+<div class='bggray'>
+"never seen anything like it" - 
+<br/>
+	<div class="qo">
+	vitalik buterin, originator of the DAO - let's change the past.
+	</div>
+
+</div>
+<div class='bggray'>
+"God is the Lord." - 
+<br/>
+	<div class="qo">
+	satochi nakamoto, a distinguished miner and early settler.
+	</div>
+
+</div>
+<div class='bggray'>
+"grab a coffe" qoute from atomicals-js miner
+<br/>
+	<div class="qo">
+	a mighty and celebrated hacker.
+	</div>
+
+</div>
+<br/>
+<img src="mine.gif"/>
+<img src="mine.gif"/>
+<img src="mine.gif"/>
+<div class="fa " style="background-color:skyblue">
+message of notice to the united society of mining:
+<br/>
+	<div class="qo">
+	operations are on schedule.
+	mining in progress....
+	</div>
+
+</div>
+<img src="mine.gif"/>
+<img src="mine.gif"/>
+<img src="mine.gif"/>
 
 
-<h3> Infinity </h3>
-<pre>
- 48 8888.0   65536   * 3333 = 218431488
- 49 8888.1   77936   * 3333 = 259760688
- 50 8888.2   92682   * 3333 = 308909106
- 51 8888.3   110218  * 3333 = 367356594
- 52 8888.4   131072  * 3333 = 436862976
- 53 8888.5   155872  * 3333 = 519521376
- 54 8888.6   185364  * 3333 = 617818212
- 55 8888.7   220436  * 3333 = 734713188
- 56 8888.8   262144  * 3333 = 873725952
- 57 8888.9   311744  * 3333 = 1039042752
- 58 8888.10  370728  * 3333 = 1235636424
- 59 8888.11  440872  * 3333 = 1469426376
- 60 8888.12  524288  * 3333 = 1747451904
- 61 8888.13  623488  * 3333 = 2078085504
- 62 8888.14  741456  * 3333 = 2471272848
- 63 8888.15  881744  * 3333 = 2938852752
- 64 88888.0  1048577 * 3333 = 3494907141
- 65 88888.1  1246975 * 3333 = 4156167675
- 66 88888.2  1482911 * 3333 = 4942542363
- 67 88888.3  1763488 * 3333 = 5877705504
- 68 88888.4  2097153 * 3333 = 6989810949
- 69 88888.5  2493949 * 3333 = 8312332017
- 70 88888.6  2965821 * 3333 = 9885081393
- 71 88888.7  3526976 * 3333 = 11755411008
- 72 88888.8  4194305 * 3333 = 13979618565
- 73 88888.9  4987897 * 3333 = 16624660701
- 74 88888.10 5931642 * 3333 = 19770162786
- 75 88888.11 7053951 * 3333 = 23510818683
- 76 88888.12 8388609 * 3333 = 27959233797
-</pre>
+<h4>
+fan letters <img class="inline" src="email.gif" /> email correspondence
+</h4>
+<center class="qo"> Why should I be mining pow over pow? </center>
+<div>
+<div class='l1 dashed'>
 
-<h3> Einsof </h3>
-<pre>
- 80 000000.0  16777216  * 10 = 167772160
- 81 000000.1  19951585  * 10 = 199515850
- 82 000000.2  23726567  * 10 = 237265670
- 83 000000.3  28215802  * 10 = 282158020
- 84 000000.4  33554433  * 10 = 335544330
- 85 000000.5  39903170  * 10 = 399031700
- 86 000000.6  47453133  * 10 = 474531330
- 87 000000.7  56431604  * 10 = 564316040
- 88 000000.8  67108864  * 10 = 671088640
- 89 000000.9  79806339  * 10 = 798063390
- 90 000000.10 94906266  * 10 = 949062660
- 91 000000.11 112863207 * 10 = 1128632070
- 92 000000.12 134217729 * 10 = 1342177290
- 93 000000.13 159612678 * 10 = 1596126780
- 94 000000.14 189812532 * 10 = 1898125320
- 95 000000.15 225726413 * 10 = 2257264130
- 96 0000000.0 268435456 * 10 = 2684354560
- 97 0000000.1 319225355 * 10 = 3192253550
- 98 0000000.2 379625063 * 10 = 3796250630
- 99 0000000.3 451452826 * 10 = 4514528260
-</pre>
 
-</body>
+Einsof is a perpetual pow token on atomicals that was born out of necessity. 
+I was mining infinity. I had some mining power, but lack of capital.
+I have come to the conclusion that the parameters infinity is set upon are
+in their nature limiting the minting by tx fees first and mining power second.
+The tx fees were a hurdle for me. And after looking at it more closely, I came to
+believe that it will doom infinity as a whole.
+
+After first cycle of minting, where mining power outs the tx fees.
+I saw GPU miners coming. And due to them, the cycle of minting will repeat itself again from the start - infinity will again be limited mostly by fees and not mining power.
+
+By changing the parameters, I have setup einsof to somehow mitigate the problem.
+Mining is always hard, and mostly doesn't depend on a lot of txs to the blockchain, ie fees.
+
+I can't say I fully understand the gameplay of the parameters available for launching a
+perpetual token. It seems to be an open problem, we has a community will slowly have to figure out.
+
+Why u should be mining it? well honestly ser, wen u think real hard about it,
+until u almost burst your thinking apparatus from the top, u might notice a new cycle starting...
+this overlay of pow over pow, might be the "new bitcoin" - different attire but same persona.
+it might be infinity, it might be einsof, it might be a pow on runes or ordinals.
+
+You see....
+Bitcoin as a service provides energy companies an ability to transport energy cheaply.
+In a paradoxical way, instead of transporting gas to some location which costs money,
+energy companies, choose instead to burn it in place for mining btc.
+
+They get to sell energy without moving it anywhere. That's the magic of btc for em.
+Notice I am leaving out of the discussion the monetary system that btc introduces,
+and am focusing only on the side of the energy companies.
+
+Now, you saw lately the explosion of ordi and atoms. 
+They all forget where they came from and whats it all about.
+It's about transporting physical energy instantly into the market.
+A pow on top of pow will finish the work they started : simple tokens on pow - evolve into
+pow tokens on pow. 
+
+Please forgive me for being a bit disordered. 
+I do not yet fully understand, what we are up against with this new proof of work on top of btc's
+proof of work. But it seems to me an unavoidable future we are heading towards.
+
+<img src="emaildog.gif" />
+<br/>
+Wish u honesty, humility and wellness, sir. 
+</div></div>
+
+
+<hr/>
+<div id="wrapper">
+	<img  src="vs2.jpg" />
+</div>
+
+<hr/>
+<center> Thanks for reading Boss, by the bye,<span style="font-size:4px">
+<br/>
+<br/>
+<a href="sermon.html">Sermon for the dead</a>
+</span>
+<br/>
+.
+</center>
+
+<center>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+<img width="20px" src="z2.gif"/>
+.8
+</center>
+
+ </body>
 </html>
